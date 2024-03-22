@@ -57,6 +57,14 @@
     font-size: 22px;
   }
 
+  p3{
+    font-size: 13px
+  }
+
+  li{
+    margin-bottom: 14px;
+  }
+
   .menu {
     list-style-type: none;
     margin: 0;
@@ -67,6 +75,7 @@
   .menu li {
     display: inline;
     margin-right: 10px;
+    font-size: 23px;
   }
   .menu li a {
     text-decoration: none;
@@ -152,53 +161,82 @@
 
   .flex-container {
     display: flex;
-    justify-content: center; /* 컨테이너 내 아이템들을 가운데 정렬 */
-    align-items: center; /* 아이템들을 세로 방향 중앙에 위치시킴 */
-    gap: 20px; /* 아이템들 사이의 간격 */
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
   }
 
   .item {
-    text-align: center; /* 아이템 내 텍스트 중앙 정렬 */
+    text-align: center; 
   }
 
   .item img {
-    width: 500px; /* 이미지 크기 조정 */
-    height: 200px; /* 이미지 높이 자동 조정 */
+    width: 500px; 
+    height: 200px; 
   }
 
   .image-overlay-container {
     position: relative;
-    display: inline-block; /* 이미지와 오버레이 텍스트를 감싸는 컨테이너 */
+    display: inline-block;
   }
 
   .overlay-text {
     position: absolute;
-    bottom: 10px; /* 이미지 하단에서부터의 거리 */
+    bottom: 10px; 
     left: 0;
-    width: 100%; /* 이미지 너비와 동일하게 설정 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    color: white; /* 텍스트 색상 */
-    font-weight: bold; /* 텍스트 굵기 */
-    background-color: rgba(0, 0, 0, 0.5); /* 배경색상과 투명도 */
-    padding: 5px 0; /* 상하 패딩 */
+    width: 100%; 
+    text-align: center; 
+    color: white; 
+    font-weight: bold; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 5px 0; 
   }
 
   .hobbies {
     display: flex;
-    justify-content: space-around; /* 항목들 사이에 공간을 균등하게 배분 */
-    align-items: center; /* 세로 방향으로 중앙 정렬 */
-    flex-wrap: wrap; /* 필요시 다음 줄로 항목을 이동 */
+    justify-content: space-around;
+    align-items: center; 
+    flex-wrap: wrap; 
   }
 
   .hobby-item {
-    text-align: center; /* 텍스트를 중앙 정렬 */
-    margin: 0px; /* 항목 주변 여백 */
+    text-align: center;
+    margin: 0px;
   }
 
   .hobby-item img {
-    width: 400px; /* 이미지 너비 조정 */
-    height: auto; /* 이미지 높이 자동 조정 */
+    width: 400px;
+    height: 250px;
   }
+
+  .goals {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    flex-wrap: wrap; 
+  }
+
+  .goal-item {
+    text-align: center;
+    margin: 0px;
+  }
+
+  .goal-item img {
+    width: 400px;
+    height: 250px;
+  }
+
+  footer {
+    text-align: right;
+    margin-top: 20px;
+    padding: 20px;
+    color: whitesmoke;
+  }
+
+  footer hr {
+    margin-bottom: 10px;
+  }
+
 
 
 
@@ -208,11 +246,12 @@
 </head>
 <div>
 
+
 <div class="header">
   <ul class="menu">
-    <li><a href="#">Home</a></li>
+    <li><a href="https:gyumin4726.github.io">Home</a></li>
     <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="#" onclick="toggleMenu1()" >Contact</a></li>
   </ul>
   <div class="right-section">
     <div class="search-container">
@@ -227,10 +266,12 @@
   </div>
 </div>
 
+
 <ul class="mennuu-list">
   <li><a href="#s1">소속</a></li>
   <li><a href="#s2">MBTI</a></li>
   <li><a href="#s3">취미 및 흥미</a></li>
+  <li><a href="#s4">목표</a></li>
 </ul>
 
 
@@ -242,16 +283,22 @@
 <h2>소속</h2>
 <div class="item">
   <div class="image-overlay-container">
+    <a href="https://cst.kookmin.ac.kr/nano/intro" target="_blank">
     <img src="https://news.microsoft.com/wp-content/uploads/2014/12/img_140602_02_Web.jpg" alt="나전물">
     <div class="overlay-text">국민대 나노전자물리학과</div>
+    </a>
   </div>
   <div class="image-overlay-container">
+    <a href="https://cs.kookmin.ac.kr/" target="_blank">
     <img src="https://news.microsoft.com/wp-content/uploads/2014/12/img_140602_02_Web.jpg" alt="소융">
     <div class="overlay-text">국민대 소프트웨어전공</div>
+    </a>
   </div>
   <div class="image-overlay-container">
+    <a href="https://www.instagram.com/likelion_kmu/" target="_blank">
     <img src="https://krimwoo.github.io/pictures/likelion.jpg" alt="설명2">
     <div class="overlay-text">멋쟁이 사자처럼 국민대</div>
+  </a>
   </div>
 </div>
 </div>
@@ -293,6 +340,59 @@
 </div>
 </div>
 
+<div id="s4">
+  <h2>목표</h2>
+  <div class="goals">
+    <div class="goal-item">
+      <img src="https://media.istockphoto.com/id/1216719224/vector/hackathon-logo.jpg?s=612x612&w=0&k=20&c=AZ30Qv3SZZ4U0HmJWvWtqe1szhJ1Drrkc_srKLl6-i0=" alt="목표 1">
+      <p>해커톤 참가</p>
+    </div>
+    <div class="goal-item">
+      <img src="https://c1.wallpaperflare.com/preview/294/960/948/accomplishment-ceremony-education-graduation.jpg" alt="목표 2">
+      <p>8차학기 안에 졸업</p>
+    </div>
+    <div class="goal-item">
+      <img src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/2Biz/image/d_rOmYTE29L4gBSEanuGiqEna9c" alt="취미 3">
+      <p>토플 100점 이상</p>
+    </div>
+    <div class="goal-item">
+      <img src="https://c4.wallpaperflare.com/wallpaper/805/936/1019/code-python-computer-python-programming-wallpaper-preview.jpg" alt="취미 4">
+      <p>파이썬 마스터</p>
+    </div>
+  </div>
+  </div>
+
+<div id="con">
+<footer>
+  <hr>
+  <div>
+  <p3>전화번호: 010-8900-1754</p3></div>
+  <p3>이메일: gyumin1129@kookmin.ac.kr</p3>
+</footer>
+</div>
+
+
+<script>
+  function toggleMenu() {
+    var menu = document.querySelector('.mennuu-list');
+    if (menu.style.display === 'block') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'block';
+    }
+  }
+</script>
+
+<script>
+  function toggleMenu() {
+    var menu = document.querySelector('.mennuu-list');
+    if (menu.style.display === 'block') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'block';
+    }
+  }
+</script>
 
 
 </body>
