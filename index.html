@@ -1,72 +1,300 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="style.css">
-<html lang = 'ko'>
-    <img src="https://lh3.googleusercontent.com/proxy/rVMqCyHe7rK3o7Iez9yeCSd2CcKtFoowvK5hRb_aj-D4iNdHsuof57xJtc0mWgU6GwcAuEnmBbXPehCm2kTcmIZ1YK4OTFlq65aKQTD0UHg92w" alt="likelion logo">
-    <head>
-        <meta charset = 'UTF-8' />
-        <title>LIKE LION LogIn</title>
+<html lang="ko">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>GYUMIN's Homepage</title>
+<style>
+  @keyframes moveBackground {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 0; }
+  }
+  body {
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/385/220/840/space-clouds-aurorae-dark-wallpaper-preview.jpg');
+    background-size: cover;
+    animation: moveBackground 240s linear infinite;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: auto
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+  }
 
-        <style>
-            #password {
-                width: 254px;
-             }
-            #int {
-                width: 300px;
-                height: 60px;
-                }
-        </style>
-    </head>
+  h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 100px;
+    color: lightblue;
+    text-align: center;
+    margin-bottom: 0;
+  }
 
-    <body>
-        <h1>LIKE LION UNIV.</h1>
-        <h3>회원가입</h3>
+  h2 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
 
-        <form action="" method="POST">
-            <fieldset>
-                <legend>기본 정보</legend>
+  h3 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    color: aqua;
+  }
 
-                <div>
-                    <label for = 'id'>아이디</label>: <input type= 'text' id="id" placeholder="아이디는 8자 이상입니다."/>
-                </div>
-                <div>
-                    <label for = 'password'>비밀번호</label>: 
-                <input type= 'password' id="password" placeholder="비밀번호는 10자 이상입니다."/>
-            </div>
-                <div>
-                    <label for = 'gender'>성별</label>: 
-                    남자 <input type="radio" name="gender" value="male">
-                     여자 <input type="radio" name="gender" value="female">
-                </div>
-            </fieldset>
+  h4{
+    margin-top: 0;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  P{
+    font-size: 22px;
+  }
+
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  .menu li {
+    display: inline;
+    margin-right: 10px;
+  }
+  .menu li a {
+    text-decoration: none;
+    color: white;
+  }
+  .right-section {
+    display: flex;
+    align-items: center;
+  }
+  .search-container {
+    display: flex;
+    margin-right: 20px;
+  }
+  .search-container input[type="text"] {
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+  }
+  .search-container button {
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .search-container button:hover {
+    background-color: blueviolet;
+  }
+  .mennuu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .mennuu div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+  }
+  .mennuu-list {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    right: 10px;
+    top: 50px;
+  }
+  .mennuu-list li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  .chart-container {
+    width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    display: block;
+  }
+  .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    background: #ddd;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .bar span {
+    padding: 15px;
+    color: black;
+  }
+  .I { width: 60%; height: 30px; background-color: blue; }
+  .E { width: 40%; height: 30px; background-color: skyblue; }
+  .S { width: 40%; height: 30px; background-color: lightgreen; }
+  .N { width: 60%; height: 30px; background-color: green; }
+  .T { width: 80%; height: 30px; background-color: hotpink; }
+  .F { width: 20%; height: 30px; background-color: PINK; }
+  .J { width: 70%; height: 30px; background-color: YELLOW; }
+  .P { width: 30%; height: 30px; background-color: lightgoldenrodyellow; }
+
+  .flex-container {
+    display: flex;
+    justify-content: center; /* 컨테이너 내 아이템들을 가운데 정렬 */
+    align-items: center; /* 아이템들을 세로 방향 중앙에 위치시킴 */
+    gap: 20px; /* 아이템들 사이의 간격 */
+  }
+
+  .item {
+    text-align: center; /* 아이템 내 텍스트 중앙 정렬 */
+  }
+
+  .item img {
+    width: 500px; /* 이미지 크기 조정 */
+    height: 200px; /* 이미지 높이 자동 조정 */
+  }
+
+  .image-overlay-container {
+    position: relative;
+    display: inline-block; /* 이미지와 오버레이 텍스트를 감싸는 컨테이너 */
+  }
+
+  .overlay-text {
+    position: absolute;
+    bottom: 10px; /* 이미지 하단에서부터의 거리 */
+    left: 0;
+    width: 100%; /* 이미지 너비와 동일하게 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    color: white; /* 텍스트 색상 */
+    font-weight: bold; /* 텍스트 굵기 */
+    background-color: rgba(0, 0, 0, 0.5); /* 배경색상과 투명도 */
+    padding: 5px 0; /* 상하 패딩 */
+  }
+
+  .hobbies {
+    display: flex;
+    justify-content: space-around; /* 항목들 사이에 공간을 균등하게 배분 */
+    align-items: center; /* 세로 방향으로 중앙 정렬 */
+    flex-wrap: wrap; /* 필요시 다음 줄로 항목을 이동 */
+  }
+
+  .hobby-item {
+    text-align: center; /* 텍스트를 중앙 정렬 */
+    margin: 0px; /* 항목 주변 여백 */
+  }
+
+  .hobby-item img {
+    width: 400px; /* 이미지 너비 조정 */
+    height: auto; /* 이미지 높이 자동 조정 */
+  }
 
 
-            <fieldset>
-                <legend>부가 정보</legend>
-                <label>취미</label>:
-                코딩 <input type="checkbox" name="hobby" value="coding"> 영화감상 <input type="checkbox" name="hobby" value="movie_watching"> 음악감상 
-                <input type="checkbox" name="hobby" value="music_listening"> 독서 <input type="checkbox" name="hobby" value="reading"> 운동 
-                <input type="checkbox" name="hobby" value="exercising">
 
-                
-                <div>
-                    <label for = 'profile'>프로필 사진</label>: <input type= 'file' id="profile"/>
-                </div>
-                <label for = 'place'>사는 지역</label>:
-                <select>
-                    <option value="1" selected>서울</option>
-                    <option value="2" >경기</option>
-                    <option value="3" >강원</option>
-                </select>
-                <div>
-                    <label for = 'int'>자기소개</label>: <input type= 'text' id="int" placeholder="가벼운 자기소개를 입력해주세요."/>
-                </div>
-                <div>
-                    <button for = 'b1'></button> <button type="submit">가입하기
-                    <button for = 'b2'></button> <button type="submit">다시 작성
-                </div>
-                
-            </fieldset>
-        </form>
-        
-    </body>
+
+
+</style>
+</head>
+<div>
+
+<div class="header">
+  <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="right-section">
+    <div class="search-container">
+      <input type="text" placeholder="Search...">
+      <button type="submit">Search</button>
+    </div>
+    <div class="mennuu" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</div>
+
+<ul class="mennuu-list">
+  <li><a href="#s1">소속</a></li>
+  <li><a href="#s2">MBTI</a></li>
+  <li><a href="#s3">취미 및 흥미</a></li>
+</ul>
+
+
+<h1>GYUMIN</h1>
+
+<h4>2001.11.29</h4>
+
+<div id="s1">
+<h2>소속</h2>
+<div class="item">
+  <div class="image-overlay-container">
+    <img src="https://news.microsoft.com/wp-content/uploads/2014/12/img_140602_02_Web.jpg" alt="나전물">
+    <div class="overlay-text">국민대 나노전자물리학과</div>
+  </div>
+  <div class="image-overlay-container">
+    <img src="https://news.microsoft.com/wp-content/uploads/2014/12/img_140602_02_Web.jpg" alt="소융">
+    <div class="overlay-text">국민대 소프트웨어전공</div>
+  </div>
+  <div class="image-overlay-container">
+    <img src="https://krimwoo.github.io/pictures/likelion.jpg" alt="설명2">
+    <div class="overlay-text">멋쟁이 사자처럼 국민대</div>
+  </div>
+</div>
+</div>
+
+<div id="s2">
+<h2>MBTI</h2>
+<h3>INTJ</h3>
+<div class="chart-container">
+  <div class="bar I"><span class="label">I</span><span>60%</span></div>
+  <div class="bar E"><span class="label">E</span><span>40%</span></div>
+  <div class="bar S"><span class="label">S</span><span>40%</span></div>
+  <div class="bar N"><span class="label">N</span><span>60%</span></div>
+  <div class="bar T"><span class="label">T</span><span>80%</span></div>
+  <div class="bar F"><span class="label">F</span><span>20%</span></div>
+  <div class="bar J"><span class="label">J</span><span>70%</span></div>
+  <div class="bar P"><span class="label">P</span><span>30%</span></div>
+</div>
+</div>
+
+<div id="s3">
+<h2>취미 및 흥미</h2>
+<div class="hobbies">
+  <div class="hobby-item">
+    <img src="https://t3.ftcdn.net/jpg/03/70/42/66/240_F_370426690_Pejt9KxjWTHPklsKwripaxr0iA17zupF.jpg" alt="취미 1">
+    <p>영어 공부</p>
+  </div>
+  <div class="hobby-item">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAGWlN34PYG2F-hitQNWjjisyIqUChjCUO_ieAlIjBli2oXTBwdkWpJm_RD4YDpr1XKstN2vyiQgvKF0yAozR3TPAWC0dETmJLsaZXv0c4D2SlL3leH6qWQQ__C9xjzgXlEH7noxciiPeOTT3eCKPhM5MplD3m3lSKhIvSZDWkBkFcytXEAwTi-PmBBw/s640/%EB%A7%A4%ED%99%943.gif" alt="취미 2">
+    <p>웹툰 보기</p>
+  </div>
+  <div class="hobby-item">
+    <img src="https://1.bp.blogspot.com/-L89HSCfTcbk/W_mb2lPxQAI/AAAAAAAAKT8/5G7Qw6k_AXMWUq2y12nzIvCPX845mAZqwCLcBGAs/s1600/%25ED%259B%2585455.gif" alt="취미 3">
+    <p>축구 경기 시청</p>
+  </div>
+  <div class="hobby-item">
+    <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDA3MTRfMTYx/MDAxNTk0Njg0NDU5Njk3.i27sgmFKF3v71BnhAp9mEhpF0n3SXcSC2EgBuUNq8zIg.pLPxpMQUsFhq0BcdODpQcentcDXnqp2-EbOsbqf4gvIg.PNG.dnjswls23/image.png?type=w800" alt="취미 4">
+    <p>SF 영화 관람</p>
+  </div>
+</div>
+</div>
+
+
+
+</body>
 </html>
+
