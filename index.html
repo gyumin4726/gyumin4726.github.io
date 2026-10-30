@@ -65,20 +65,22 @@
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
-                <p>I study what a model should keep and what it should change, both in its pretrained weights and in the fixed-size state it carries through a sequence.</p>
+                <p>I want to build AI that keeps learning reliably under real-world constraints, and AI that understands how the physical world changes. My work follows these two directions.</p>
                 <p class="question">
-                  <b>Adapting pretrained models with little data.</b>
-                  Which parts of a pretrained model should change, and which should stay fixed?
-                  I studied this in few-shot class-incremental learning.
+                  <b>Learning under real-world constraints.</b>
+                  Deployed models get few labels, a stream of new classes, and conditions their training never covered.
+                  I work on few-shot and continual learning, where a pretrained model has to take in new knowledge without losing what it knows,
+                  so the question is which parts should change and which should stay fixed.
+                  At KIST, I adapt SAM3 to traffic CCTV footage.
                   <br><span class="keywork">Key work:</span> <a href="#ssmoe">SS-MoE</a>
                 </p>
                 <p class="question">
-                  <b>What a fixed-size state keeps.</b>
-                  Mamba-based models carry a fixed-size state through a sequence.
-                  I measure how long that state keeps information in pretrained vision backbones.
+                  <b>Physical understanding and world models.</b>
+                  I treat sequence models as dynamical systems.
+                  In Mamba-based vision backbones, I read the decay timescales of the fixed-size state to see how long it keeps information.
+                  Next, I want to bring this view to world models, which learn the dynamics of their environment and imagine what comes next.
                   <br><span class="keywork">Key work:</span> <a href="#spaninit">SpanInit</a>
                 </p>
-                <p>I am also interested in world models, which face the same question over long horizons.</p>
               </td>
             </tr>
           </tbody></table>
