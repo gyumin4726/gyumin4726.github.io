@@ -6,8 +6,18 @@
     <title>Gyumin Park</title>
 
     <meta name="author" content="Gyumin Park">
+    <meta name="description" content="Gyumin Park, research intern at KIST. Adaptation and memory in pretrained models, and world models.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <style>
+      .question { margin: 0 0 12px 0; }
+      .question b { font-family: 'Lato', Verdana, Helvetica, sans-serif; }
+      .keywork { font-style: italic; }
+      table.news td { padding: 3px 0; vertical-align: top; }
+      table.news td.date { width: 92px; color: #555; white-space: nowrap; }
+      .thumb { width: 100%; max-width: 220px; border: 1px solid #e5e5e5; border-radius: 4px; }
+      .muted { color: #666; }
+    </style>
   </head>
 
   <body>
@@ -20,14 +30,18 @@
             <tr style="padding:0px">
               <td style="padding:2.5%;width:100%;vertical-align:middle">
                 <p class="name" style="text-align: center;">
-                  Gyumin Park
+                  Gyumin Park <span class="muted" style="font-size:24px;">박규민</span>
                 </p>
                 <p>
-                  I am a research intern at the <a href="https://www.kist.re.kr/eng/">Korea Institute of Science and Technology (KIST)</a> in Seoul, in the Center for Artificial Intelligence.
-                  I received B.S. degrees in Nano and Electronic Physics and in Computer Engineering from <a href="https://english.kookmin.ac.kr/">Kookmin University</a> in 2026,
-                  where I did undergraduate research in the HCI Lab with Prof. Sangmin Yoon.
+                  I am a research intern at the Center for Artificial Intelligence at the
+                  <a href="https://www.kist.re.kr/eng/">Korea Institute of Science and Technology (KIST)</a> in Seoul,
+                  where I adapt vision foundation models to label traffic CCTV footage.
+                  I received B.S. degrees in Nano and Electronic Physics and in Computer Engineering from
+                  <a href="https://english.kookmin.ac.kr/">Kookmin University</a> in 2026,
+                  and did undergraduate research in the HCI Lab with Prof. Sangmin Yoon.
                 </p>
                 <p>
+                  I came to machine learning from physics, and I still tend to understand a model through its dynamics.
                   I am applying to PhD programs for Fall 2027.
                 </p>
                 <p style="text-align:center">
@@ -36,7 +50,7 @@
                   <a href="https://github.com/gyumin4726">GitHub</a>
                 </p>
               </td>
-              <!-- To add a photo later, put it at images/profile.jpg and add this cell:
+              <!-- Photo: save a square photo as images/profile.jpg, change the cell above to width:63%, and uncomment this cell.
               <td style="padding:2.5%;width:37%;max-width:37%">
                 <img style="width:100%;max-width:100%;object-fit:cover;border-radius:50%;" alt="profile photo" src="images/profile.jpg">
               </td>
@@ -49,27 +63,55 @@
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
-                <p>
-                  My research asks two questions about pretrained models.
-                  When a model adapts with little data, which parts should change and which should stay fixed?
-                  When a model carries a fixed-size state through a long sequence, what does that state keep, and for how long?
-                  So far I have studied both with Mamba-based vision models.
-                  Next I want to ask them of world models, which keep the past in a fixed-size state and roll it forward to imagine what comes next.
+                <p>I work on computer vision and machine learning. My work so far has followed two threads.</p>
+                <p class="question">
+                  <b>Adapting pretrained models with little data.</b>
+                  Which parts of a pretrained model should change, and which should stay fixed?
+                  I studied this in few-shot class-incremental learning, and at KIST I adapt SAM3 to traffic CCTV footage with class-wise low-rank adapters.
+                  <br><span class="keywork">Key work:</span> <a href="#ssmoe">SS-MoE</a>
                 </p>
+                <p class="question">
+                  <b>What a fixed-size state keeps.</b>
+                  Mamba-based models carry a fixed-size state through a sequence.
+                  I measure how long that state keeps information in pretrained vision backbones.
+                  <br><span class="keywork">Key work:</span> <a href="#spaninit">SpanInit</a>
+                </p>
+                <p>I am also interested in world models, which face the same question over long horizons.</p>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- News -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>News</h2>
+                <table class="news" style="width:100%;border:0px;border-collapse:collapse;margin-top:8px;"><tbody>
+                  <tr><td class="date">Aug 2026</td><td>Graduated from Kookmin University with B.S. degrees in Nano and Electronic Physics and in Computer Engineering.</td></tr>
+                  <tr><td class="date">Jul 2026</td><td>Joined the Center for Artificial Intelligence at KIST as a research intern.</td></tr>
+                  <tr><td class="date">Sep 2025</td><td>Started a research internship at QSimPlus on quantum key distribution.</td></tr>
+                  <tr><td class="date">2025</td><td>Top Prize in the UNITEF AI Application Proficiency Program, and selected for its Singapore Global Training Program.</td></tr>
+                  <tr><td class="date">Jan 2024</td><td>Joined the HCI Lab at Kookmin University as an undergraduate researcher.</td></tr>
+                </tbody></table>
               </td>
             </tr>
           </tbody></table>
 
           <!-- Manuscripts -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px 16px 0 16px;width:100%;vertical-align:middle">
+                <h2>Manuscripts</h2>
+              </td>
+            </tr>
+          </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-            <tr>
-              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
-                <div class="colored-box" style="background-color:#e8eef7;">
-                  <strong>Under review</strong>
-                </div>
+            <tr id="spaninit">
+              <td style="padding:16px;width:28%;vertical-align:middle">
+                <img class="thumb" src="images/spaninit.png" alt="Timescale banks of two pretrained checkpoints: spread and nearly collapsed">
               </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
+              <td style="padding:8px;width:72%;vertical-align:middle">
                 <span class="papertitle">Pretrained Mamba-based vision backbones can exhibit collapsed timescale banks: Checkpoint-aware state expansion with SpanInit</span>
                 <br>
                 <strong>Gyumin Park</strong>, Sangmin Yoon
@@ -84,13 +126,11 @@
               </td>
             </tr>
 
-            <tr>
-              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
-                <div class="colored-box" style="background-color:#eeeeee;">
-                  <strong>In preparation</strong>
-                </div>
+            <tr id="ssmoe">
+              <td style="padding:16px;width:28%;vertical-align:middle">
+                <img class="thumb" src="images/ssmoe.png" alt="SS-MoE overview: frozen VMamba backbone, spatial router, selective-scan experts, fixed ETF classifier">
               </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
+              <td style="padding:8px;width:72%;vertical-align:middle">
                 <span class="papertitle">Selective scanning with mixture-of-experts for few-shot class-incremental learning</span>
                 <br>
                 <strong>Gyumin Park</strong>, Sangmin Yoon
@@ -106,17 +146,50 @@
 
           </tbody></table>
 
+          <!-- Projects -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px 16px 0 16px;width:100%;vertical-align:middle">
+                <h2>Projects</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px 6px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:8px 16px;width:100%;vertical-align:top">
+                <span class="papertitle">Safe human-in-the-loop driving with imperfect human intervention</span>
+                <br>
+                <em>R&amp;Dix, inter-university student research club</em>, 2025 &nbsp;/&nbsp; <a href="https://github.com/gyumin4726/SAFE_RL">code</a>
+                <p style="margin:6px 0 0 0;">
+                  Extended a safe human-in-the-loop reinforcement learning framework for highway driving in the SMARTS simulator,
+                  connected an LLM that suggests a driving action at each step, and tested how imperfect human interventions during training affect the agent.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:8px 16px;width:100%;vertical-align:top">
+                <span class="papertitle">Parameter optimization for quantum key distribution</span>
+                <br>
+                <em>QSimPlus</em>, 2025 &nbsp;/&nbsp; <a href="https://github.com/gyumin4726/QKD_OPT">code</a>
+                <p style="margin:6px 0 0 0;">
+                  Searched decoy-state QKD operating parameters with a genetic algorithm,
+                  and trained an FT-Transformer that predicts the optimized parameters and the secret key rate from device conditions.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+
           <!-- Experience and education -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
+              <td style="padding:16px 16px 0 16px;width:100%;vertical-align:middle">
                 <h2>Experience</h2>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table style="width:100%;border:0px;border-spacing:0px 6px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:8px 16px;width:22%;vertical-align:top">Jul 2026 &ndash; present</td>
+              <td style="padding:8px 16px;width:22%;vertical-align:top" class="muted">Jul 2026 &ndash; present</td>
               <td style="padding:8px;width:78%;vertical-align:top">
                 <strong>Research Intern</strong>, Center for Artificial Intelligence, KIST
                 <br>
@@ -124,7 +197,7 @@
               </td>
             </tr>
             <tr>
-              <td style="padding:8px 16px;width:22%;vertical-align:top">Jan 2024 &ndash; Aug 2026</td>
+              <td style="padding:8px 16px;width:22%;vertical-align:top" class="muted">Jan 2024 &ndash; Aug 2026</td>
               <td style="padding:8px;width:78%;vertical-align:top">
                 <strong>Undergraduate Researcher</strong>, HCI Lab, Kookmin University
                 <br>
@@ -132,7 +205,7 @@
               </td>
             </tr>
             <tr>
-              <td style="padding:8px 16px;width:22%;vertical-align:top">Fall 2025</td>
+              <td style="padding:8px 16px;width:22%;vertical-align:top" class="muted">Fall 2025</td>
               <td style="padding:8px;width:78%;vertical-align:top">
                 <strong>Research Intern</strong>, QSimPlus
                 <br>
@@ -143,14 +216,14 @@
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
+              <td style="padding:16px 16px 0 16px;width:100%;vertical-align:middle">
                 <h2>Education</h2>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table style="width:100%;border:0px;border-spacing:0px 6px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:8px 16px;width:22%;vertical-align:top">Mar 2020 &ndash; Aug 2026</td>
+              <td style="padding:8px 16px;width:22%;vertical-align:top" class="muted">Mar 2020 &ndash; Aug 2026</td>
               <td style="padding:8px;width:78%;vertical-align:top">
                 <strong>Kookmin University</strong>, Seoul
                 <br>
