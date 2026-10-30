@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Gyumin Park</title>
+
+    <meta name="author" content="Gyumin Park">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+
+          <!-- Header -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:100%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Gyumin Park
+                </p>
+                <p>
+                  I am a research intern at the <a href="https://www.kist.re.kr/eng/">Korea Institute of Science and Technology (KIST)</a> in Seoul, in the Center for Artificial Intelligence.
+                  I received B.S. degrees in Nano and Electronic Physics and in Computer Engineering from <a href="https://english.kookmin.ac.kr/">Kookmin University</a> in 2026,
+                  where I did undergraduate research in the HCI Lab with Prof. Sangmin Yoon.
+                </p>
+                <p>
+                  I am applying to PhD programs for Fall 2027.
+                </p>
+                <p style="text-align:center">
+                  <a href="mailto:gyumin4726@gmail.com">Email</a> &nbsp;/&nbsp;
+                  <a href="data/GyuminPark-CV.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/gyumin4726">GitHub</a>
+                </p>
+              </td>
+              <!-- To add a photo later, put it at images/profile.jpg and add this cell:
+              <td style="padding:2.5%;width:37%;max-width:37%">
+                <img style="width:100%;max-width:100%;object-fit:cover;border-radius:50%;" alt="profile photo" src="images/profile.jpg">
+              </td>
+              -->
+            </tr>
+          </tbody></table>
+
+          <!-- Research -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Research</h2>
+                <p>
+                  My research asks two questions about pretrained models.
+                  When a model adapts with little data, which parts should change and which should stay fixed?
+                  When a model carries a fixed-size state through a long sequence, what does that state keep, and for how long?
+                  So far I have studied both with Mamba-based vision models.
+                  Next I want to ask them of world models, which keep the past in a fixed-size state and roll it forward to imagine what comes next.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- Manuscripts -->
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr>
+              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
+                <div class="colored-box" style="background-color:#e8eef7;">
+                  <strong>Under review</strong>
+                </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <span class="papertitle">Pretrained Mamba-based vision backbones can exhibit collapsed timescale banks: Checkpoint-aware state expansion with SpanInit</span>
+                <br>
+                <strong>Gyumin Park</strong>, Sangmin Yoon
+                <br>
+                <em>Under review</em>, 2026
+                <p></p>
+                <p>
+                  The relative decay timescales of a pretrained Mamba-based backbone can be read from its weights without data.
+                  Across nine public checkpoints, some had nearly collapsed timescales while others spread over a factor of a thousand.
+                  SpanInit initializes added states to fill the largest gaps those timescales leave.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
+                <div class="colored-box" style="background-color:#eeeeee;">
+                  <strong>In preparation</strong>
+                </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <span class="papertitle">Selective scanning with mixture-of-experts for few-shot class-incremental learning</span>
+                <br>
+                <strong>Gyumin Park</strong>, Sangmin Yoon
+                <br>
+                <em>In preparation for journal submission</em>, 2026
+                <p></p>
+                <p>
+                  SS-MoE freezes a VMamba backbone after the base session and keeps the classifier fixed, so only a mixture of selective-scan experts adapts to new classes.
+                  On CUB-200, selective-scan experts beat MLP experts with more parameters in every session.
+                </p>
+              </td>
+            </tr>
+
+          </tbody></table>
+
+          <!-- Experience and education -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Experience</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:8px 16px;width:22%;vertical-align:top">Jul 2026 &ndash; present</td>
+              <td style="padding:8px;width:78%;vertical-align:top">
+                <strong>Research Intern</strong>, Center for Artificial Intelligence, KIST
+                <br>
+                Automatic labeling of traffic CCTV footage with foundation models
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:8px 16px;width:22%;vertical-align:top">Jan 2024 &ndash; Aug 2026</td>
+              <td style="padding:8px;width:78%;vertical-align:top">
+                <strong>Undergraduate Researcher</strong>, HCI Lab, Kookmin University
+                <br>
+                Advisor: Prof. Sangmin Yoon
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:8px 16px;width:22%;vertical-align:top">Fall 2025</td>
+              <td style="padding:8px;width:78%;vertical-align:top">
+                <strong>Research Intern</strong>, QSimPlus
+                <br>
+                Parameter optimization for quantum key distribution
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Education</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:8px 16px;width:22%;vertical-align:top">Mar 2020 &ndash; Aug 2026</td>
+              <td style="padding:8px;width:78%;vertical-align:top">
+                <strong>Kookmin University</strong>, Seoul
+                <br>
+                B.S. in Nano and Electronic Physics; B.S. in Computer Engineering (second major: Software)
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- Footer -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:right;font-size:small;">
+                  Website template from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron</a>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+
+        </td>
+      </tr>
+    </tbody></table>
+  </body>
+</html>
